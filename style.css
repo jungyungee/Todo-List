@@ -15,13 +15,14 @@ body{
     background-color: beige;
 }
 #box{
-    border: solid;
+    border: noen;
     border-radius: 30px;
     padding: 30px;
     background-color: lightskyblue;
 }
 #title{
     text-align: center;
+    font-size: 35px;
 }
 #inputBox{
     text-align: center;;
