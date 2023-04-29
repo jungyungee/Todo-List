@@ -11,7 +11,7 @@ function addTodo(){
         let list = document.createElement('li');
         // 체크박스, 할일 내용, 삭제 버튼 생성
         let chk = document.createElement("input");
-        chk.type="checkbox"
+        chk.type="checkbox";
         let todo = document.createElement("div");
         let del = document.createElement('button');
 
@@ -35,24 +35,24 @@ function addTodo(){
         // 삭제버튼 클릭 시, 삭제 이벤트 실행
         del.addEventListener("click",deleteLi);
 
-        //할일 완료 기능
+        //할일 완료 
         chk.addEventListener("change", () => {
             if (chk.checked == true ){
-                list.style.textDecoration = "line-through";
-                list.style.color = "gray"; 
+                todo.style.textDecoration = "line-through";
+                todo.style.color = "gray"; 
             }
             else {
-                list.style.textDecoration = "none";
-                list.style.color = "black";
+                todo.style.textDecoration = "none";
+                todo.style.color = "black";
             }
         })
 
-        // 입력된 내용 입력 창에서 사라지게
+        // 입력된 내용은 입력 창에서 사라지게
         newTodo.value = null;
     }
 }
 
-// 입력된 할 일 삭제 기능
+// 입력된 할 일 삭제 기능 함수
 function deleteLi(e){
     let removeOne = e.target.parentElement;  //선택된 버튼의 부모 객체를 변수로
     removeOne.remove(); //할당된 부모 객체 삭제
