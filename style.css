@@ -12,14 +12,15 @@
 body{
     margin: 50px;
     padding: 50px;
-    background-color: beige;
+    background-color: #FFEEEF;
 }
 #box{
     border: noen;
     border-radius: 30px;
+    background-color: beige;
+    box-shadow: 5px 5px 5px 5px gray;
+    width: 500px;
     padding: 30px;
-    background-color: lightskyblue;
-    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -42,7 +43,7 @@ body{
 li{
     display: flex;
     justify-content: space-between;
-    border-bottom: dotted #34393A;
+    border-bottom: dashed #34393A;
     padding: 10px;
 }
 #inputBox{
