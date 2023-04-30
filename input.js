@@ -43,7 +43,7 @@ function addTodo(){
             }
             else {
                 todo.style.textDecoration = "none";
-                todo.style.color = "black";
+                todo.style.color = "#34393A";
             }
         })
 
