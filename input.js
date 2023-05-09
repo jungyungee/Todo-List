@@ -48,19 +48,7 @@ function addTodo(){
             }
         })
 
-        let todos = JSON.parse(localStorage.getItem("todoLocal"));
-
-        if (todos !== null){
-            // 기존 값이 있으면 배열에 내용 추가
-            todos.push(newTodo.value);
-            localStorage.setItem("todoLocal", JSON.stringify(todos));
-        }
-        else{
-            // 기존 저장된 값이 없으면 배열 만들기
-            todos = [newTodo.value];
-            localStorage.setItem("todoLocal", JSON.stringify(todos));
-        }
-        
+        saveStorage();
 
         // 입력된 내용은 입력 창에서 사라지게
         newTodo.value = null;
@@ -71,4 +59,20 @@ function addTodo(){
 function deleteLi(e){
     let removeOne = e.target.parentElement;  //선택된 버튼의 부모 객체를 변수로
     removeOne.remove(); //할당된 부모 객체 삭제
+}
+
+// 로컬 스토리지에 저장하는 함수
+function saveStorage(){
+    let todos = JSON.parse(localStorage.getItem("todoLocal"));
+
+    if (todos !== null){
+        // 기존 값이 있으면 배열에 내용 추가
+        todos.push(newTodo.value);
+        localStorage.setItem("todoLocal", JSON.stringify(todos));
+    }
+    else{
+        // 기존 저장된 값이 없으면 배열 만들기
+        todos = [newTodo.value];
+        localStorage.setItem("todoLocal", JSON.stringify(todos));
+    }
 }
